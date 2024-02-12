@@ -1,0 +1,109 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Anonymous+Pro&family=Fira+Mono:wght@400;500;700&family=Honk&family=JetBrains+Mono:wght@200;400;500;600&family=Mitr:wght@200;300;400;500&family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,600;6..12,700&family=Open+Sans&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@300&family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+ font-family: 'JetBrains Mono', monospace; 
+}
+body{
+  background: url('C:\Users\muham\OneDrive\Desktop\React\To do list\src\assets\WE ARE HIRING POSTER - Made with PosterMyWall.jpg') no-repeat center center fixed;
+  background-size: cover;  background-size: cover;
+
+}
+.to-do-list{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h2{
+  font-size: 3.1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5 ease;
+}
+
+.add-button{
+  background-color: rgb(20, 129, 102);
+  font-size: 1.3rem;
+  border-radius: 0 5px 5px 0;
+}
+.add-button:hover{
+  background-color: rgb(19, 142, 111);
+}
+.delete-button{
+  background-color: rgb(152, 0, 0);
+}
+.delete-button:hover{
+  background-color: rgb(167, 53, 53)
+}
+.move-button{
+  background-color: rgb(22, 23, 109);
+}
+.move-button:hover{
+  background-color: rgb(41, 45, 177);
+}
+input[type='text']{
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  color: black;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(245, 241, 241, 0.919);
+
+  
+}
+ol{
+  padding: 0px;
+}
+li{
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: rgb(245, 241, 241,0.8);
+  margin-bottom: 10px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  min-width: 900px;
+}
+.text{
+  flex:1;
+}
+.delete-button, .move-button{
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+.center-div{
+  display: flex;
+  justify-content: center;
+  padding: 19px;
+}
+.center-div input{
+  width: 770px;
+}
+.content-div{
+  display: flex;
+  justify-content: center;
+}
+
+h3{
+  color: beige;
+  font-size: 2.4rem;
+  margin-top: 130px;
+}
+
