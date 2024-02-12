@@ -7,7 +7,9 @@ function ToDoList() {
 
   function handleInputTask(event) {
     setNewtask(event.target.value)
+ 
 
+    
   }
   function addTask() {
     if (newTask.trim() !== "") {
