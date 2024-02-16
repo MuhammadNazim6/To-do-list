@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 console.log(localStorage.getItem("myTodoLists"));
-function ToDoList() {
+function ToDoList(props) {
 
 
   const [tasks, setTasks] = useState(()=>{
@@ -13,8 +13,6 @@ function ToDoList() {
   function handleInputTask(event) {
     setNewtask(event.target.value)
  
-
-    
   }
   function addTask() {
     if (newTask.trim() !== "") {
@@ -49,9 +47,16 @@ function ToDoList() {
     }
   }
 
+  function removeUser(){
+    localStorage.removeItem('name');
+    localStorage.removeItem('welcomeBoolean');
+    localStorage.removeItem('myTodoLists');
+    props.setWelcomeFalse()
+  }
+
   return (
     <>
-      <h2>To do list</h2>
+      <h2>{props.name}'s To do list</h2>
       <div className="center-div">
         <input
           id="inputTag"
@@ -79,6 +84,7 @@ function ToDoList() {
 
         </ol>
       </div>
+      <p className='removeUser' onClick={removeUser}> <i className="fas fa-user-times"></i> Remove existing user </p>
     </>
   )
 }
