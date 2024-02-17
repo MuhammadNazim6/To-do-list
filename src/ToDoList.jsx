@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 console.log(localStorage.getItem("myTodoLists"));
+import './App.css'
 function ToDoList(props) {
 
 
@@ -9,7 +10,11 @@ function ToDoList(props) {
   })
 
   const [newTask, setNewtask] = useState()
+  const [indexes,setIndex] = useState(()=>{
+    const storedIndexes = localStorage.getItem("myIndexes")
+    return storedIndexes ? JSON.parse(storedIndexes) : []
 
+  })
   function handleInputTask(event) {
     setNewtask(event.target.value)
  
@@ -35,6 +40,9 @@ function ToDoList(props) {
       setTasks([...tasks])
       localStorage.setItem("myTodoLists", JSON.stringify([...tasks]));
 
+      let newIndexes = indexes.filter((i)=>i!==index)
+      localStorage.setItem("myIndexes",JSON.stringify([...newIndexes , index-1 ]))
+
     }
 
   }
@@ -43,6 +51,11 @@ function ToDoList(props) {
       [tasks[index], tasks[index + 1]] = [tasks[index + 1], tasks[index]]
       setTasks([...tasks])
       localStorage.setItem("myTodoLists", JSON.stringify([...tasks]));
+
+      let newIndexes = indexes.filter((i)=>i!==index)
+      localStorage.setItem("myIndexes",JSON.stringify([...newIndexes , index+1 ]))
+
+
 
     }
   }
@@ -54,9 +67,22 @@ function ToDoList(props) {
     props.setWelcomeFalse()
   }
 
+  function checkBoxFn(index){
+    if(indexes.includes(index)){
+      let newIndexes = indexes.filter((i)=>i!==index)
+      setIndex([...newIndexes])
+      localStorage.setItem("myIndexes",JSON.stringify([...newIndexes]))
+
+    }else{
+      setIndex([...indexes , index])
+      localStorage.setItem("myIndexes",JSON.stringify([...indexes , index ]))
+      
+    }
+  }
+
   return (
     <>
-      <h2>{props.name}'s To do list</h2>
+      <h2>{props.name}'s To-do-list</h2>
       <div className="center-div">
         <input
           id="inputTag"
@@ -75,6 +101,11 @@ function ToDoList(props) {
           { tasks.length > 0 ? 
             tasks.map((task, index) =>
               <li key={index}>
+                 <label class="checkbox-container">
+    <input onClick={()=>checkBoxFn(index)} type="checkbox" checked={indexes.includes(index) ? '1' : '' }/>
+    <span class="checkmark"></span>
+
+  </label>
                 <span className='text'>  {task}  </span>
                 <button className='delete-button' onClick={() => deleteTask(index)}><i className="fa-solid fa-trash"></i></button>
                 <button className='move-button' onClick={() => moveTaskUp(index)}><i className="fa-solid fa-arrow-up"></i></button>
