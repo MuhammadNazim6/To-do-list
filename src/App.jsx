@@ -1,6 +1,6 @@
 import React , {useState} from "react"
-import WelcomePage from './WelcomePage'
-import ToDoList from "./ToDoList"
+import WelcomePage from './WelcomePage.jsx'
+import ToDoList from "./ToDoList.jsx"
 
 function App() {
    const [welcome , setWelcome] = useState(localStorage.getItem('welcomeBoolean'))

@@ -114,11 +114,13 @@ li{
 .content-div{
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 .welcome-heading{
   display: flex;
   justify-content: center;
   margin-top: 200px;
+  text-align: center;
 }
 
 h3{
@@ -152,4 +154,20 @@ h4{
   background-color: rgb(109, 111, 112);
   padding: 8px;
   cursor: pointer;
+}
+
+.welcome-container {
+  max-width: 600px; 
+  margin: 0 auto;  
+}
+
+@media (max-width: 768px) {
+  
+  .welcome-container {
+    padding: 15px;  
+  }
+
+  .continue-button {
+    width: auto;   
+  }
 }

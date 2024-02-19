@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-console.log(localStorage.getItem("myTodoLists"));
 import './App.css'
 function ToDoList(props) {
 
