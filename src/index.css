@@ -20,6 +20,7 @@ h2{
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 button{
@@ -63,6 +64,7 @@ input[id='inputTag']{
   align-items: center;
   justify-content: center;
   background-color: rgba(238, 234, 234, 0.919);
+  width: 80%;
 }
 input[id='nameInput']{
   padding: 10px;
@@ -74,6 +76,7 @@ input[id='nameInput']{
   border: none;
   outline: 2px solid rgb(62, 62, 62);
   outline-offset: 4px; 
+  
 }
 input::placeholder {
   color: #232323;
@@ -107,6 +110,7 @@ li{
   display: flex;
   justify-content: center;
   padding: 19px;
+  text-align: center;
 }
 .center-div input{
   width: 770px;
@@ -171,3 +175,6 @@ h4{
     width: auto;   
   }
 }
+
+/* --- */
+
