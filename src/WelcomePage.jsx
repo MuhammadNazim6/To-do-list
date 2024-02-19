@@ -10,14 +10,12 @@ function WelcomePage(props){
   }
 
   return(
-    <div>
+    <div >
+      <div className="welcome-heading">
       <h2>Welcome to your Task Scheduler</h2>
+    </div>
         <div className="content-div">
-        <h4>Enter your name</h4>
-        </div>
-
-        <div className="content-div">
-        <input className="nameInput" type="text" onChange={changeName} value={name} />
+        <input id="nameInput" placeholder='What should we call you???' type="text" onChange={changeName} value={name} />
         </div>
 
         <div className="content-div">

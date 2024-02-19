@@ -5,11 +5,19 @@ import ToDoList from "./ToDoList"
 function App() {
    const [welcome , setWelcome] = useState(localStorage.getItem('welcomeBoolean'))
    const [name , setName] = useState(localStorage.getItem('name'))
+   const [alert,setAlert] = useState('')
 
    function toggleWelcome(){
-      localStorage.setItem('welcomeBoolean',true)
-      setWelcome(true)
-      setName(localStorage.getItem('name'))
+      const name = localStorage.getItem('name')
+      if(name.length > 1){
+         localStorage.setItem('welcomeBoolean',true)
+         setWelcome(true)
+         setName(name)
+      }else{
+
+      }
+   
+      
    }
 
    function setWelcomeFalse(){
