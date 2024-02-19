@@ -15,7 +15,7 @@ body{
 }
 
 h2{
-  font-size: 3.1rem;
+  font-size: 2.8rem;
   color: white;
   display: flex;
   align-items: center;
@@ -34,24 +34,25 @@ button{
 }
 
 .add-button{
-  background-color: rgb(20, 129, 102);
+  background-color: #10205b;
   font-size: 1.3rem;
   border-radius: 0 5px 5px 0;
 }
 .add-button:hover{
-  background-color: rgb(19, 142, 111);
+  background-color: #10205b;
 }
 .delete-button{
-  background-color: rgb(152, 0, 0);
+  background-color:#333283;
+  color: white;
 }
 .delete-button:hover{
-  background-color: rgb(167, 53, 53)
+  background-color:#3c3b83;
 }
 .move-button{
-  background-color: rgb(22, 23, 109);
+  background-color: #535C91;
 }
 .move-button:hover{
-  background-color: rgb(41, 45, 177);
+  background-color: #5d6697;
 }
 input[type='text']{
   font-size: 1.3rem;
@@ -61,7 +62,7 @@ input[type='text']{
   border: none;
   align-items: center;
   justify-content: center;
-  background-color: rgba(245, 241, 241, 0.919);
+  background-color: rgba(238, 234, 234, 0.919);
 }
 ol{
   padding: 0px;
@@ -69,10 +70,10 @@ ol{
 li{
   font-size: 1.4rem;
   font-weight: bold;
-  padding: 15px;
-  background-color: rgb(245, 241, 241,0.8);
+  padding: 9px;
+  background-color: rgba(156, 152, 152, 0.8);
   margin-bottom: 10px;
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid rgb(200, 199, 199);
   border-radius: 5px;
   display: flex;
   align-items: center;
