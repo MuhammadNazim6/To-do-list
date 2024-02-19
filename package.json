@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "homepage": "http://MuhammadNazim6.github.io/To-do-list"
   },
   "dependencies": {
     "react": "^18.2.0",
