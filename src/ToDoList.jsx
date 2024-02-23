@@ -83,7 +83,7 @@ function ToDoList(props) {
 
       </div>
       <div className="content-div">
-        <ol>
+        <ol className='hover-list'>
 
           {tasks.length > 0 ?
             tasks.map((task, index) =>

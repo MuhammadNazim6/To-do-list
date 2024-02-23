@@ -97,7 +97,15 @@ li{
   display: flex;
   align-items: center;
   min-width: 900px;
+  transition: transform 0.3s ease; 
+
 }
+li:hover{
+  background-color: #6e6c6c;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
 .text{
   flex:1;
 }
@@ -176,5 +184,4 @@ h4{
   }
 }
 
-/* --- */
 
