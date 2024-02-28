@@ -87,7 +87,7 @@ function ToDoList(props) {
 
           {tasks.length > 0 ?
             tasks.map((task, index) =>
-              <li key={index}>
+              <li onClick={() => checkBoxFn(index)} key={index}>
                 <label className="checkbox-container">
                   <input onChange={() => checkBoxFn(index)} type="checkbox" checked={task.check} />
                   <span className="checkmark"></span>
