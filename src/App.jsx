@@ -5,7 +5,6 @@ import ToDoList from "./ToDoList.jsx"
 function App() {
    const [welcome , setWelcome] = useState(localStorage.getItem('welcomeBoolean'))
    const [name , setName] = useState(localStorage.getItem('name'))
-   const [alert,setAlert] = useState('')
 
    function toggleWelcome(){
       const name = localStorage.getItem('name')

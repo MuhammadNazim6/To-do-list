@@ -9,7 +9,6 @@ function ToDoList(props) {
   })
 
   const [newTask, setNewtask] = useState({ title: "", check: false })
-
   function handleInputTask(event) {
     setNewtask(n => ({ ...n, title: event.target.value }))
 
@@ -21,9 +20,6 @@ function ToDoList(props) {
       setNewtask({title:''})
       localStorage.setItem("myTodoLists", JSON.stringify([...tasks, newTask]));
       console.log(localStorage.getItem("myTodoLists"))
-
-
-
     }
   }
   function deleteTask(index) {
@@ -67,6 +63,12 @@ function ToDoList(props) {
     localStorage.setItem("myTodoLists", JSON.stringify([...updatedArr]));
   }
 
+  function KeyPressed(evt){
+    if(evt.key ==='Enter' && newTask.title.length > 2){
+      addTask()
+    }
+  }
+
   return (
     <>
       <h2>{props.name}'s To-do-list</h2>
@@ -77,6 +79,7 @@ function ToDoList(props) {
           placeholder='Add a new task...'
           value={newTask.title}
           onChange={handleInputTask}
+          onKeyDown={KeyPressed}
         />
 
         <button className="add-button" onClick={addTask}>Add Task</button>
@@ -94,9 +97,9 @@ function ToDoList(props) {
 
                 </label>
                 <span className={task.check ? 'checked-text text' : 'text'}>  {task.title}  </span>
-                <button className='delete-button' onClick={() => deleteTask(index)}><i className="fa-solid fa-trash"></i></button>
                 <button className='move-button' onClick={() => moveTaskUp(index)}><i className="fa-solid fa-arrow-up"></i></button>
                 <button className='move-button' onClick={() => moveTaskDown(index)}><i className="fa-solid fa-arrow-down"></i></button>
+                <button className='delete-button' onClick={() => deleteTask(index)}><i className="fa-solid fa-trash"></i></button>
               </li>) :
             <h3>No tasks available</h3>
           }
@@ -107,5 +110,6 @@ function ToDoList(props) {
     </>
   )
 }
+
 
 export default ToDoList
